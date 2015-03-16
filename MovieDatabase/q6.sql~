@@ -1,0 +1,36 @@
+
+SET search_path TO imdb;
+
+-- Query 6 statements
+
+-- Get all movies before 1990
+CREATE VIEW OldMovie AS
+SELECT *
+FROM Movies m
+WHERE m.year < 1990; 
+
+-- Get maximum mID for original table 
+CREATE VIEW MaxMid AS
+SELECT max(m1.movie_id) as movie_id
+FROM Movies m1; 
+
+-- Create the new table with new mID
+CREATE VIEW SequelMovie AS
+SELECT o.movie_id + m.movie_id as movie_id, o.title||': The Sequel' as title, 2020 as year, o.rating as rating
+FROM OldMovie o, MaxMid m; 
+
+insert into Movies (SELECT * FROM SequelMovie);
+
+
+------------------------------------
+-- Testing output and to be removed
+SELECT * 
+--FROM OldMovie; 
+--FROM MaxMid;
+FROM Movies;  
+-------------------------------------
+
+--DROP VIEW Answer CASCADE;
+DROP VIEW SequelMovie CASCADE; 
+DROP VIEW MaxMid CASCADE; 
+DROP VIEW OldMovie CASCADE; 

@@ -1,0 +1,61 @@
+import java.sql.*;
+import java.util.ArrayList;
+
+class TestAssignment2
+{
+    Connection conn;
+    Assignment2 a2;
+
+    TestAssignment2()
+    {
+        conn = null;
+        try{
+            a2 = new Assignment2();
+        }catch(Exception s)
+        {
+            System.out.println("Error");
+        }
+
+    }
+
+    /**
+     *Parameters:
+     *args[0] : dbname
+     *args[1] : username for database
+     *arts[2] : password for database
+     */
+    public static void main(String args[])
+    {
+// javac Assignment2.java
+// javac TestAssignment2.java
+// java -cp /local/packages/jdbc-postgresql/postgresql-8.4-701.jdbc4.jar: TestAssignment2 //localhost:5432/csc343h-c4soonch c4soonch
+        System.out.println("              JDBC PART            ");
+        String dbname = args[0]; // "//localhost:5432/csc343h-c4soonch"
+        String username = args[1]; // c4soonch
+        String password = "";
+        String url = "jdbc:postgresql:" + dbname;
+		// url = "jdbc:postgresql://localhost:5432/csc343h-c4soonch"
+
+        TestAssignment2 ta2 = new TestAssignment2();
+
+        //Test function connectDB
+        ta2.a2.connectDB(url,username,password);
+            // conn = DriverManager.getConnection(url, "c4soonch", "");
+        //Test function findCoStars
+        System.out.println("");
+        System.out.println("Find co-stars of Pitt, Brad");
+        ArrayList<String> res = ta2.a2.findCoStars("Pitt, Brad");
+        for (String s : res) {
+            System.err.println(s);
+        }
+
+        //Test function computeConnectivity
+        System.out.println("");
+        System.out.println("Compute the connectivity between Pitt, Brad  and Norton, Edward");
+        System.err.println(ta2.a2.computeConnectivity("Pitt, Brad", "Norton, Edward")); // 1 correct 
+      System.err.println(ta2.a2.computeConnectivity("Jones, Tommy Lee", "Johansson, Scarlett")); // 2 correct
+        System.err.println(ta2.a2.computeConnectivity("Jones, Tommy Lee", "Pitt, Brad")); // -1 cause never connects correct 
+        System.err.println(ta2.a2.computeConnectivity("Jones, Tommy Lee", "Pitt2, Brad")); // -1 cause doesnt't exist  correct
+        ta2.a2.disconnectDB();
+    }
+}

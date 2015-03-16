@@ -1,0 +1,65 @@
+SET search_path TO imdb;
+
+-- Query 3 statements
+
+-- Group all actor, cinematographer, composer, director, writer as DistinctPeople
+-- Note: Different position is the same person 
+CREATE VIEW DistinctPeople AS
+SELECT movie_id, person_id
+FROM Roles 
+UNION
+SELECT * 
+FROM Cinematographers
+UNION
+SELECT * 
+FROM  Composers
+UNION 
+SELECT * 
+FROM Directors
+UNION 
+SELECT * 
+FROM Writers; 
+
+-- Count NumPeople for each movie
+CREATE VIEW NumPeople AS
+SELECT d.movie_id as movie_id, count(d.person_id) as people
+From DistinctPeople d
+GROUP BY d.movie_id
+ORDER BY people DESC, movie_id ASC; 
+
+
+-- Now need find total number of positions for the movie 
+CREATE VIEW DistinctPositions AS
+SELECT movie_id, person_id
+FROM Roles 
+UNION ALL
+SELECT * 
+FROM Cinematographers
+UNION ALL
+SELECT * 
+FROM  Composers
+UNION ALL
+SELECT * 
+FROM Directors
+UNION ALL
+SELECT * 
+FROM Writers; 
+
+
+
+------------------------------------
+-- Testing output and to be removed
+SELECT * 
+--FROM DistinctPeople; 
+--FROM NumPeople; 
+--FROM DistinctPositions; 
+
+--FROM Answer;  
+-------------------------------------
+
+--DROP VIEW Answer CASCADE;
+
+DROP VIEW DistinctPositions CASCADE; 
+DROP VIEW NumPeople CASCADE; 
+DROP VIEW DistinctPeople CASCADE; 
+

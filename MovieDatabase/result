@@ -1,0 +1,173 @@
+-----------------------------------
+         TESTING FOR q1.sql    
+-----------------------------------
+q1 exists.
+******** YOUR RESULT ********
+        name        | bradtimes 
+--------------------+-----------
+ Desplat, Alexandre |         1
+ Hanke, P.J.        |         1
+ Roth, Eric         |         1
+ Uhls, Jim          |         1
+(4 rows)
+
+
+******** EXPECTED RESULT ********
+        name        | bradtimes 
+--------------------+-----------
+ Desplat, Alexandre |         1
+ Hanke, P.J.        |         1
+ Roth, Eric         |         1
+ Uhls, Jim          |         1
+(4 rows)
+
+
+Correct Answer
+
+-----------------------------------
+         TESTING FOR q2.sql    
+-----------------------------------
+q2 exists.
+******** YOUR RESULT ********
+ keywords | avgrating 
+----------+-----------
+        1 |      7.95
+        3 |      7.85
+(2 rows)
+
+
+******** EXPECTED RESULT ********
+ keywords | avgrating 
+----------+-----------
+        1 |      7.95
+        3 |      7.85
+(2 rows)
+
+
+Correct Answer
+
+-----------------------------------
+         TESTING FOR q3.sql    
+-----------------------------------
+q3 exists.
+******** YOUR RESULT ********
+ movie_id | positions | people 
+----------+-----------+--------
+        6 |         7 |      7
+        1 |         6 |      6
+        2 |         6 |      6
+        3 |         6 |      6
+        4 |         6 |      6
+        5 |         6 |      5
+(6 rows)
+
+
+******** EXPECTED RESULT ********
+ movie_id | positions | people 
+----------+-----------+--------
+        6 |         7 |      7
+        1 |         6 |      6
+        2 |         6 |      6
+        3 |         6 |      6
+        4 |         6 |      6
+        5 |         6 |      5
+(6 rows)
+
+
+Correct Answer
+
+-----------------------------------
+         TESTING FOR q4.sql    
+-----------------------------------
+q4 exists.
+******** YOUR RESULT ********
+     writer     |       supermovie       | rating | decade 
+----------------+------------------------+--------+--------
+ Coen, Ethan    | No Country for Old Men |    8.1 | 2000s
+ Schrader, Paul | Taxi Driver            |    8.4 | 1970s
+ Uhls, Jim      | Fight Club             |    8.9 | 1990s
+(3 rows)
+
+
+******** EXPECTED RESULT ********
+     writer     |       supermovie       | rating | decade 
+----------------+------------------------+--------+--------
+ Coen, Ethan    | No Country for Old Men |    8.1 | 2000s
+ Schrader, Paul | Taxi Driver            |    8.4 | 1970s
+ Uhls, Jim      | Fight Club             |    8.9 | 1990s
+(3 rows)
+
+
+Correct Answer
+
+-----------------------------------
+         TESTING FOR q5.sql    
+-----------------------------------
+q5 exists.
+******** YOUR RESULT ********
+ person_id |      name      | year1 |    movie1     | year2 |         movie2         | year3 |          movie3          
+-----------+----------------+-------+---------------+-------+------------------------+-------+--------------------------
+        18 | Bardem, Javier |  2006 | Goya's Ghosts |  2007 | No Country for Old Men |  2008 | Vicky Cristina Barcelona
+(1 row)
+
+
+******** EXPECTED RESULT ********
+ person_id |      name      | year1 |    movie1     | year2 |         movie2         | year3 |          movie3          
+-----------+----------------+-------+---------------+-------+------------------------+-------+--------------------------
+        18 | Bardem, Javier |  2006 | Goya's Ghosts |  2007 | No Country for Old Men |  2008 | Vicky Cristina Barcelona
+(1 row)
+
+
+Correct Answer
+
+-----------------------------------
+         TESTING FOR q6.sql        
+-----------------------------------
+q6.sql exists.
+******** OLD TABLE ********
+ movie_id |                title                | year | rating 
+----------+-------------------------------------+------+--------
+        1 | Taxi Driver                         | 1976 |    8.4
+        2 | Fight Club                          | 1999 |    8.9
+        3 | The Curious Case of Benjamin Button | 2008 |    7.8
+        4 | No Country for Old Men              | 2007 |    8.1
+        5 | Goya's Ghosts                       | 2006 |    6.9
+        6 | Vicky Cristina Barcelona            | 2008 |    7.2
+(6 rows)
+
+******** NEW TABLE ********
+ movie_id |                title                | year | rating 
+----------+-------------------------------------+------+--------
+        1 | Taxi Driver                         | 1976 |    8.4
+        2 | Fight Club                          | 1999 |    8.9
+        3 | The Curious Case of Benjamin Button | 2008 |    7.8
+        4 | No Country for Old Men              | 2007 |    8.1
+        5 | Goya's Ghosts                       | 2006 |    6.9
+        6 | Vicky Cristina Barcelona            | 2008 |    7.2
+        7 | Taxi Driver: The Sequel             | 2020 |    8.4
+(7 rows)
+
+
+******** EXPECTED NEW TABLE ********
+ movie_id |                title                | year | rating 
+----------+-------------------------------------+------+--------
+        1 | Taxi Driver                         | 1976 |    8.4
+        2 | Fight Club                          | 1999 |    8.9
+        3 | The Curious Case of Benjamin Button | 2008 |    7.8
+        4 | No Country for Old Men              | 2007 |    8.1
+        5 | Goya's Ghosts                       | 2006 |    6.9
+        6 | Vicky Cristina Barcelona            | 2008 |    7.2
+        7 | Taxi Driver: The Sequel             | 2020 |    8.4
+(7 rows)
+
+
+Correct Answer
+
+              JDBC PART            
+
+Find co-stars of Pitt, Brad
+Blanchett, Cate
+Norton, Edward
+
+Compute the connectivity between Pitt, Brad  and Norton, Edward
+1

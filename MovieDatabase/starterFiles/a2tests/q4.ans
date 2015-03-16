@@ -1,0 +1,7 @@
+     writer     |       supermovie       | rating | decade 
+----------------+------------------------+--------+--------
+ Coen, Ethan    | No Country for Old Men |    8.1 | 2000s
+ Schrader, Paul | Taxi Driver            |    8.4 | 1970s
+ Uhls, Jim      | Fight Club             |    8.9 | 1990s
+(3 rows)
+

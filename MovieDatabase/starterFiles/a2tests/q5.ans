@@ -1,0 +1,5 @@
+ person_id |      name      |    movie1     | year1 |         movie2         | year2 |          movie3          | year3 
+-----------+----------------+---------------+-------+------------------------+-------+--------------------------+-------
+        18 | Bardem, Javier | Goya's Ghosts |  2006 | No Country for Old Men |  2007 | Vicky Cristina Barcelona |  2008
+(1 row)
+

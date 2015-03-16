@@ -1,0 +1,11 @@
+ movie_id |                title                | year | rating 
+----------+-------------------------------------+------+--------
+        1 | Taxi Driver                         | 1976 |    8.4
+        2 | Fight Club                          | 1999 |    8.9
+        3 | The Curious Case of Benjamin Button | 2008 |    7.8
+        4 | No Country for Old Men              | 2007 |    8.1
+        5 | Goya's Ghosts                       | 2006 |    6.9
+        6 | Vicky Cristina Barcelona            | 2008 |    7.2
+        7 | Taxi Driver: The Sequel             | 2020 |    8.4
+(7 rows)
+
