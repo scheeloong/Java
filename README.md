@@ -1,14 +1,8 @@
-Java  
-===============
+#Java  
 
-MovieDatabase  
-----------------
+###MovieDatabase 
 
+###ComputerNetworks  
 
-ComputerNetworks
-----------------
-
-Practice
-----------------
-
+###Practice  
 My own code for practice and learning. 
