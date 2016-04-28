@@ -4,8 +4,8 @@
     <!-- TODO: Change mainClass to whatever your mainClass is including packageName -->
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>kafka-experiment</artifactId>
-    <groupId>experiment </groupId>
+    <artifactId>sequence-generator</artifactId>
+    <groupId>generator</groupId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>kafka-experiment</name>
@@ -231,7 +231,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${spring.boot.version}</version>
                     <configuration>
-                        <mainClass>kafka.examples.SimpleConsumerDemo</mainClass>
+                        <mainClass>sequence.Main</mainClass>
                                         <layout>ZIP</layout>
                                             </configuration>
                 <executions>
